@@ -1,158 +1,14 @@
 fileFormatVersion: 2
 guid: af6dbfc7e5e25e94fac31d196c49fcab
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: Back Claw IK.L
-    100004: Back Claw IK.R
-    100006: Back Claw.L
-    100008: Back Claw.L 1
-    100010: Back Claw.L_end
-    100012: Back Claw.R
-    100014: Back Claw.R 1
-    100016: Back Claw.R_end
-    100018: Back Leg 1.R
-    100020: Back Leg 2.R
-    100022: Back Leg 2.R_end
-    100024: //RootNode
-    100026: Body
-    100028: Bone
-    100030: Camera
-    100032: Front Claw IK.L
-    100034: Front Claw IK.R
-    100036: Front Claw.L
-    100038: Front Claw.L 1
-    100040: Front Claw.L_end
-    100042: Front Claw.R
-    100044: Front Claw.R 1
-    100046: Front Claw.R_end
-    100048: Front Leg 1.L
-    100050: Front Leg 1.L.001
-    100052: Front Leg 1.R
-    100054: Front Leg 2.L
-    100056: Front Leg 2.L.001
-    100058: Front Leg 2.L.001_end
-    100060: Front Leg 2.L_end
-    100062: Front Leg 2.R
-    100064: Front Leg 2.R_end
-    100066: Front Leg Pointer.L
-    100068: Front Leg Pointer.L.001
-    100070: Front Leg Pointer.L.001_end
-    100072: Front Leg Pointer.L_end
-    100074: Front Leg Pointer.R
-    100076: Front Leg Pointer.R.001
-    100078: Front Leg Pointer.R.001_end
-    100080: Front Leg Pointer.R_end
-    100082: Lamp
-    100084: Leg
-    100086: Leg.001
-    100088: Leg.002
-    100090: Leg.003
-    100092: Leg.004
-    100094: Leg.005
-    100096: Leg.006
-    100098: Leg.007
-    100100: Master Control
-    100102: Spring Attachment Point
-    100104: World Centre
-    400000: Armature
-    400002: Back Claw IK.L
-    400004: Back Claw IK.R
-    400006: Back Claw.L
-    400008: Back Claw.L 1
-    400010: Back Claw.L_end
-    400012: Back Claw.R
-    400014: Back Claw.R 1
-    400016: Back Claw.R_end
-    400018: Back Leg 1.R
-    400020: Back Leg 2.R
-    400022: Back Leg 2.R_end
-    400024: //RootNode
-    400026: Body
-    400028: Bone
-    400030: Camera
-    400032: Front Claw IK.L
-    400034: Front Claw IK.R
-    400036: Front Claw.L
-    400038: Front Claw.L 1
-    400040: Front Claw.L_end
-    400042: Front Claw.R
-    400044: Front Claw.R 1
-    400046: Front Claw.R_end
-    400048: Front Leg 1.L
-    400050: Front Leg 1.L.001
-    400052: Front Leg 1.R
-    400054: Front Leg 2.L
-    400056: Front Leg 2.L.001
-    400058: Front Leg 2.L.001_end
-    400060: Front Leg 2.L_end
-    400062: Front Leg 2.R
-    400064: Front Leg 2.R_end
-    400066: Front Leg Pointer.L
-    400068: Front Leg Pointer.L.001
-    400070: Front Leg Pointer.L.001_end
-    400072: Front Leg Pointer.L_end
-    400074: Front Leg Pointer.R
-    400076: Front Leg Pointer.R.001
-    400078: Front Leg Pointer.R.001_end
-    400080: Front Leg Pointer.R_end
-    400082: Lamp
-    400084: Leg
-    400086: Leg.001
-    400088: Leg.002
-    400090: Leg.003
-    400092: Leg.004
-    400094: Leg.005
-    400096: Leg.006
-    400098: Leg.007
-    400100: Master Control
-    400102: Spring Attachment Point
-    400104: World Centre
-    2000000: Camera
-    2100000: Main Texture
-    2300000: Back Claw.L 1
-    2300002: Back Claw.R 1
-    2300004: Body
-    2300006: Front Claw.L 1
-    2300008: Front Claw.R 1
-    2300010: Leg
-    2300012: Leg.001
-    2300014: Leg.002
-    2300016: Leg.003
-    2300018: Leg.004
-    2300020: Leg.005
-    2300022: Leg.006
-    2300024: Leg.007
-    3300000: Back Claw.L 1
-    3300002: Back Claw.R 1
-    3300004: Body
-    3300006: Front Claw.L 1
-    3300008: Front Claw.R 1
-    3300010: Leg
-    3300012: Leg.001
-    3300014: Leg.002
-    3300016: Leg.003
-    3300018: Leg.004
-    3300020: Leg.005
-    3300022: Leg.006
-    3300024: Leg.007
-    4300000: Front Claw.L
-    4300002: Front Claw.R
-    4300004: Back Claw.L
-    4300006: Back Claw.R
-    4300008: Body
-    4300010: Leg.001
-    4300012: Leg
-    4300014: Leg.002
-    4300016: Leg.003
-    4300018: Leg.006
-    4300020: Leg.007
-    4300022: Leg.005
-    4300024: Leg.004
-    7400000: Armature|WalkCycle
-    9500000: //RootNode
-    10800000: Lamp
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: 1989289236423521904
+    second: Default Take
+  - first:
+      74: -7939422232465117443
+    second: WalkCycle
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -181,13 +37,14 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -195,18 +52,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -215,10 +73,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -228,6 +87,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
