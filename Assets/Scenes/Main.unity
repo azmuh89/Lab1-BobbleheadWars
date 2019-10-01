@@ -306,6 +306,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 513dbfbab4244c24595f54f23a326618, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2acc8b7a186dcaf47af6661af98073da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 513dbfbab4244c24595f54f23a326618, type: 3}
 --- !u!4 &279176668 stripped
@@ -620,6 +624,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &683028723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: d4f8be2211647554e9e583acec24aa0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1314639756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &702388778
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +842,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &929131134 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 513dbfbab4244c24595f54f23a326618,
+    type: 3}
+  m_PrefabInstance: {fileID: 279176667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &951499907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,6 +1529,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 94.9
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a8b8dcfbabcbcd14fbeef470cc50a795, type: 2}
+    - target: {fileID: 400072, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400074, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100042, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
@@ -1785,6 +1817,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4096
+  bodyAnimator: {fileID: 929131134}
 --- !u!143 &1334471067
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1803,6 +1836,63 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: -1.82, y: 6.53, z: 0.7}
+--- !u!1 &1386280313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386280314}
+  - component: {fileID: 1386280316}
+  - component: {fileID: 1386280315}
+  m_Layer: 15
+  m_Name: WallTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1386280314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386280313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 683028723}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1386280315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386280313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd089ef502516a4494a3cbeed97ffe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1386280316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386280313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 250.55, y: 17.14, z: 66.7}
+  m_Center: {x: 0, y: 6.72, z: -90.6}
 --- !u!1 &1441699353
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody head;
     public LayerMask layerMask; // indicates what layers the ray should hit
     private Vector3 currentLookTarget = Vector3.zero; // where marine should stare
+    public Animator bodyAnimator;
 
     void Start()
     {
@@ -27,11 +28,12 @@ public class PlayerController : MonoBehaviour
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         if (moveDirection == Vector3.zero)
         {
-            // TODO
+            bodyAnimator.SetBool("IsMoving", false);
         }
         else
         {
             head.AddForce(transform.right * 150, ForceMode.Acceleration); // moves the head when the marine moves
+            bodyAnimator.SetBool("IsMoving", true);
         }
 
         RaycastHit hit; // empty RaycastHit for when you get a hit, it'll be populated with an object
