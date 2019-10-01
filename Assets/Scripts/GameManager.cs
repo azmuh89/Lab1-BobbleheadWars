@@ -7,24 +7,53 @@ public class GameManager : MonoBehaviour
     public GameObject Player; // represents the bobblehead warrior
     public GameObject[] spawnPoints; // locations where aliens will spawn in the arena
     public GameObject alien; // represents the prefab for the alien
-
     public int maxAliensOnScreen; // will determine how many aliens appear on screen at once
     public int totalAliens; // will represent the total number of aliens player has to kill to win
     public float minSpawnTime; // the rate at which aliens appear
     public float maxSpawnTime;
     public int aliensPerSpawn; // how many aliens appead during spawning
 
+    public GameObject upgradePrefab;
+    public Gun gun;
+    public float upgradeMaxTimeSpawn = 7.5f;
+
     private int aliensOnScreen = 0; // will track total number of aliens currently displayed
     private float generatedSpawnTime = 0; // will track time between spawns
     private float currentSpawnTime = 0; // will track milliseconds since last spawn
 
+    private bool spawnedUpgrade = false;
+    private float actualUpgradeTime = 0;
+    private float currentUpgradeTime = 0;
+
     void Start()
     {
-
+        actualUpgradeTime = Random.Range(upgradeMaxTimeSpawn - 3.0f, upgradeMaxTimeSpawn);
+        actualUpgradeTime = Mathf.Abs(actualUpgradeTime);
     }
 
     void Update()
     {
+        currentUpgradeTime += Time.deltaTime;
+
+        if (currentUpgradeTime > actualUpgradeTime)
+        {
+            // checks if upgrade has already spawned
+            if (!spawnedUpgrade)
+            {
+                // increases the risk-and-reward dynamic for player
+                int randomNumber = Random.Range(0, spawnPoints.Length - 1);
+                GameObject spawnLocation = spawnPoints[randomNumber];
+                // handles spawning the upgrade and associating gun with it
+                GameObject upgrade = Instantiate(upgradePrefab) as GameObject;
+                Upgrade upgradeScript = upgrade.GetComponent<Upgrade>();
+                upgradeScript.gun = gun;
+                upgrade.transform.position = spawnLocation.transform.position;
+                // informs the code the upgrade has spawned
+                spawnedUpgrade = true;
+                SoundManager.Instance.PlayOneShot(SoundManager.Instance.powerUpAppear);
+            }
+        }
+
         currentSpawnTime += Time.deltaTime;
 
         if (currentSpawnTime > generatedSpawnTime) // spawn time randomizer
