@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public Gun gun;
     public float upgradeMaxTimeSpawn = 7.5f;
 
+    public GameObject deathFloor;
+
     private int aliensOnScreen = 0; // will track total number of aliens currently displayed
     private float generatedSpawnTime = 0; // will track time between spawns
     private float currentSpawnTime = 0; // will track milliseconds since last spawn
@@ -101,11 +103,12 @@ public class GameManager : MonoBehaviour
                         GameObject spawnLocation = spawnPoints[spawnPoint]; // grabs the spawn point based on index generated in last code
                         GameObject newAlien = Instantiate(alien) as GameObject;
                         newAlien.transform.position = spawnLocation.transform.position;
-                        Alien alientScript = newAlien.GetComponent<Alien>();
-                        alientScript.target = Player.transform;
+                        Alien alienScript = newAlien.GetComponent<Alien>();
+                        alienScript.target = Player.transform;
                         Vector3 targetRotation = new Vector3(Player.transform.position.x, newAlien.transform.position.y, Player.transform.position.z);
                         newAlien.transform.LookAt(targetRotation);
-                        alientScript.OnDestroy.AddListener(AlienDestroyed);
+                        alienScript.OnDestroy.AddListener(AlienDestroyed);
+                        alienScript.GetDeathParticles().SetDeathFloor(deathFloor);
                     }
                 }
             }

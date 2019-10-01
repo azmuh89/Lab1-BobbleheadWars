@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool isHit = false;
     private float timeSinceHit = 0;
     private int hitNumber = -1;    public Rigidbody marineBody;
-    private bool isDead = false;
+    private bool isDead = false;    private DeathParticles deathParticles;
     void OnTriggerEnter(Collider other)
     {
         Alien alien = other.gameObject.GetComponent<Alien>();
@@ -54,12 +54,14 @@ public class PlayerController : MonoBehaviour
         head.transform.parent = null;
         head.useGravity = true;
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.marineDeath);
+        deathParticles.Activate();
         Destroy(gameObject);
     }
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        deathParticles = gameObject.GetComponentInChildren<DeathParticles>();
     }
 
     // Update is called once per frame
