@@ -67,6 +67,10 @@ public class GameManager : MonoBehaviour
                         GameObject spawnLocation = spawnPoints[spawnPoint]; // grabs the spawn point based on index generated in last code
                         GameObject newAlien = Instantiate(alien) as GameObject;
                         newAlien.transform.position = spawnLocation.transform.position;
+                        Alien alientScript = newAlien.GetComponent<Alien>();
+                        alientScript.target = Player.transform;
+                        Vector3 targetRotation = new Vector3(Player.transform.position.x, newAlien.transform.position.y, Player.transform.position.z);
+                        newAlien.transform.LookAt(targetRotation);
                     }
                 }
             }
