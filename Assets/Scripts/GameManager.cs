@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject deathFloor;
 
+    public Animator arenaAnimator;
+
     private int aliensOnScreen = 0; // will track total number of aliens currently displayed
     private float generatedSpawnTime = 0; // will track time between spawns
     private float currentSpawnTime = 0; // will track milliseconds since last spawn
@@ -26,6 +28,18 @@ public class GameManager : MonoBehaviour
     private bool spawnedUpgrade = false;
     private float actualUpgradeTime = 0;
     private float currentUpgradeTime = 0;
+
+    private void endGame()
+    {
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.
+        elevatorArrived);
+        arenaAnimator.SetTrigger("PlayerWon");
+
+        if (totalAliens == 0)
+        {
+            Invoke("endGame", 2.0f);
+        }
+    }
 
     void Start()
     {

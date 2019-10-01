@@ -854,6 +854,12 @@ Transform:
   m_Father: {fileID: 518772145}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &432309756 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400046, guid: d4f8be2211647554e9e583acec24aa0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1314639756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &518772144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,9 +1053,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &683028721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d4f8be2211647554e9e583acec24aa0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1314639756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &683028722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683028721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d58081847c05744b8d2100164df4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1334471064}
+  elevator: {fileID: 432309756}
 --- !u!4 &683028723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d4f8be2211647554e9e583acec24aa0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1314639756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &683028724
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683028721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 1.65
+  m_Center: {x: 0, y: 0.22, z: 0}
+--- !u!95 &683028725 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: d4f8be2211647554e9e583acec24aa0f,
     type: 3}
   m_PrefabInstance: {fileID: 1314639756}
   m_PrefabAsset: {fileID: 0}
@@ -2027,6 +2072,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 400048, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.0000074653462
+      objectReference: {fileID: 0}
     - target: {fileID: 400062, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 35.59668
@@ -2087,6 +2136,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a8b8dcfbabcbcd14fbeef470cc50a795, type: 2}
+    - target: {fileID: 400020, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 400072, guid: d4f8be2211647554e9e583acec24aa0f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -2535,6 +2588,7 @@ MonoBehaviour:
   gun: {fileID: 929131132}
   upgradeMaxTimeSpawn: 7.5
   deathFloor: {fileID: 318239174}
+  arenaAnimator: {fileID: 683028725}
 --- !u!4 &1618563338
 Transform:
   m_ObjectHideFlags: 0
