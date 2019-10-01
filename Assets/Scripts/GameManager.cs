@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Player == null)
+        {
+            return;
+        }
+
         currentUpgradeTime += Time.deltaTime;
 
         if (currentUpgradeTime > actualUpgradeTime)
@@ -100,9 +105,16 @@ public class GameManager : MonoBehaviour
                         alientScript.target = Player.transform;
                         Vector3 targetRotation = new Vector3(Player.transform.position.x, newAlien.transform.position.y, Player.transform.position.z);
                         newAlien.transform.LookAt(targetRotation);
+                        alientScript.OnDestroy.AddListener(AlienDestroyed);
                     }
                 }
             }
         }
+    }
+
+    public void AlienDestroyed()
+    {
+        aliensOnScreen -= 1;
+        totalAliens -= 1;
     }
 }
